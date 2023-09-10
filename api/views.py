@@ -11,7 +11,7 @@ def get_detail(request):
 
     slack_name = request.GET.get('slack_name', None)
 
-    track_name = request.GET.get('track_name', None)
+    track = request.GET.get('track', None)
 
     current_date = datetime.date.today()
 
@@ -38,8 +38,8 @@ def get_detail(request):
                 "slack_name": slack_name,
                 "current_days": day_of_week,
                 "utc_time": "Min. =>"+ min_time_str + "  - Man =>" + max_time_str,
-                "track": track_name,
-                "github_file_url": "https://github.com/hussain4me/zu-test-assignment/ext",
+                "track": track,
+                "github_file_url": "https://github.com/hussain4me/zuri-first-assignment/blob/main/api/views.py",
                 "github_repo_url": "https://github.com/hussain4me/zuri-first-assignment",
                 "status_code": 200
          }
